@@ -1,12 +1,12 @@
 The project on line 2 entails developing a Linux shell script that acts as a system inventory and reporting tool through the automatic.
-- #!/bin/bash
-- ips=$(hostname -I)
-- names=$(whoami)
-- num_process=$(ps -aux | wc -l)
-- disk=$(df -h)
-- echo "====== Server Inventory ======"
-- echo "I'm logined as $name and my IP is $ips"
-- echo "There are currently $num_process processes running"
-- echo "This is my disk information $disk"
-- echo "====== end of Inventory ======"
+#!/bin/bash
+ips=$(hostname -I)
+names=$(whoami)
+num_process=$(ps -aux | wc -l)
+disk=$(df -h)
+echo "====== Server Inventory ======"
+echo "I'm logined as $name and my IP is $ips"
+echo "There are currently $num_process processes running"
+echo "This is my disk information $disk"
+echo "====== end of Inventory ======"
 
