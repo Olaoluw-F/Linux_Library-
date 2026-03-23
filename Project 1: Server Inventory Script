@@ -7,6 +7,6 @@ disk=$(df -h)
 echo "====== Server Inventory ======"
 echo "I'm logined as $name and my IP is $ips"
 echo "There are currently $num_process processes running"
-echo "This is my disk information $disk"
+echo "This is my disk information $disk" 
 echo "====== end of Inventory ======"
 
