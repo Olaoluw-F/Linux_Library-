@@ -1,1 +1,12 @@
+The project on line 2 entails developing a Linux shell script that acts as a system inventory and reporting tool through the automatic collection of critical information regarding the server system. This is done instead of manually entering multiple commands to obtain the desired information. The script collects information such as the host name and IP address to determine the server's identification, memory usage to determine server performance, disk usage to determine server capacity, users logged in to the server to determine security threats, and the number of running processes to determine security threats. Through the storage of the command outputs in variables and their presentation in a structured report with proper headings, the project demonstrates proper handling of data. Furthermore, the project saves the report to a file with a timestamp, demonstrating the creation of a record that can be utilized for auditing purposes. This project is significant because it introduces critical concepts in the field of automation, server system monitoring, and scripting. It is also practical because it demonstrates tasks that are carried out in the real world in the field of information technology and cybersecurity.
+- #!/bin/bash
+- ips=$(hostname -I)
+- names=$(whoami)
+- num_process=$(ps -aux | wc -l)
+- disk=$(df -h)
+- echo "====== Server Inventory ======"
+- echo "I'm logined as $name and my IP is $ips"
+- echo "There are currently $num_process processes running"
+- echo "This is my disk information $disk"
+- echo "====== end of Inventory ======"
 
