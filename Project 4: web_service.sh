@@ -1,3 +1,5 @@
+This project starting on line 3 involves creating a Linux service management script that allows a user to 
+control a web server, specifically Nginx, through an interactive menu.
 #!/bin/bash
 nginx_s=$(nginx -v)
 webserver='nginx'
