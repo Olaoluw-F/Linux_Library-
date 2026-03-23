@@ -1,1 +1,49 @@
+This project involves creating a Linux-based user management script starting from line 2.
+#!/bin/bash
+echo "===== User Management Script ====="
+echo "1: Add User"
+echo "2: Delete User"
+echo "3: List all users"
+echo "4: Add a user to a new group"
+read -p " pick a number 1-4 you want to choose from the menu: " menu
+case $menu in
+	1)
+		echo" +++ Adding a User +++"
+		read -p "Write the name of the user you want to add: " add
+		sudo adduser $add
+		if id $add &>/dev/null;then
+			echo "$add has been created " 
+		else
+			echo " $add has not be created "	
+		fi
+		echo " +++ Program Over +++ "
+		;;
+
+	2)
+		echo " --- Deleting a User ---"
+		read -p "Write the name of the user you want to delete: " delete
+		sudo userdel $delete
+		if id $delete &>/dev/null;then
+			echo " $delete has not been deleted "
+		else
+			echo" $delete has been deleted "
+		fi
+		echo " --- Program Over ---"
+		;;
+
+	3)
+		echo" --- User List User List ---"
+		compgen -u
+		echo"-----  End OF LIST -----"
+		;;
+
+	4)
+		echo " +++ Add user to a group "
+		read -p "What's the name of the user you want to add: " user
+		read -p "What's the group you want to add them to: " group
+		sudo usermod -aG $group $user
+		echo " +++ User Added +++"
+		;;
+		
+esac 
 
