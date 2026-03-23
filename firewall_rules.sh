@@ -1,3 +1,4 @@
+This project involves creating aautomatic simple firewall script. 
 #!/bin/bash
 backup_file="/tmp/new_backup_$(date +Y%+m%+d%).txt"
 sudo iptables-save > $backup_file
