@@ -1,4 +1,4 @@
-# Linux_Library
+# Linux_Library(Ubuntu)
 A Library of projects done using only the Ubuntu distribution
 - Project 1: Server Inventory Script
 - Project 2: User Management Script
