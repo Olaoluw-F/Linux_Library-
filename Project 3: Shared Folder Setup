@@ -1,0 +1,18 @@
+This project on line 3 involves creating a Linux script that sets up a secure 
+shared workspace for a group of users by automating directory creation
+#!/bin/bash
+read -p "Name the directory you want to create: " dir
+sudo mkdir -m 2770 $dir
+echo " -- Directory Created --"
+read -p "Do you want to add this directoy to a group: " answer
+if [ "$answer" == "yes" ]
+then
+	read -p "Name the group you want to add $dir too: " group
+	sudo chown :$group $dir
+	sudo getent group $group
+	echo"--- Program Over ---"
+
+else
+	echo"--- Program Over --- "
+fi
+
